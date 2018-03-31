@@ -31,6 +31,13 @@ class RoshunClass:
         else:
             print 'ERROR: dog %s not found!' % dog
 
+    def add_a_cat(self, cat):
+        if cat not in self.cats:
+            self.cats.append(cat)
+            print 'Added a cat %s' % cat
+        else:
+            print 'Cat %s already exists!' % cat
+
 def main():
     r = RoshunClass('Sophie', 'Billy')
     print r
@@ -40,6 +47,7 @@ def main():
     r.add_a_dog('Jojo')
     r.remove_a_dog('Luca')
     r.remove_a_dog('Peter')
+    r.add_a_cat('Kitty')
     print r
 
 if __name__ == '__main__':
